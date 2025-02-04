@@ -5,29 +5,50 @@
     box-sizing: border-box;
 }
 
-/* Inizialmente avevo dato un width: 80% al container ma facendo così non riuscivo a regolare il width: calc nella classe flex */
+/* Settiamo il display flex per la classe flex */
+
 .container{
-    width: 80%;
-    margin: 0 auto;
+    display: inline-block;
 }
 
-.flex{
+.row{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
-/* Noto che nel mettere display = "flex" alla classe item, gli elementi al suo interno si dispongono automaticamente in colonna anzichè in riga  */
-.item{
+/* Settiamo classe col inline-block */
+.col{
     display: flex;
+    background-color: black;
+    margin: 20px 10px;
+    width: calc(100% / 3);
+    
 }
 
-/* Regola d'oro per le immagini, con max-widht, le immagini restano nel loro contenitore */
-img{
-    max-width: 100%;
+.text{
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 80px 10px 5px;
+}
+
+.email{
+    color: lightblue;
+    font-size: smaller;
 }
 
 .image{
-    width: 30%;
+    width: 60px;
 }
 
+h2{
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
+h3{
+    margin-bottom: 5px;
+    font-size: smaller;
+}
