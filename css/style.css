@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Inizialmente avevo dato un width: 80% al container ma facendo così non riuscivo a regolare il width: calc nella classe flex */
 .container{
     width: 80%;
     margin: 0 auto;
@@ -14,3 +15,19 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+/* Noto che nel mettere display = "flex" alla classe item, gli elementi al suo interno si dispongono automaticamente in colonna anzichè in riga  */
+.item{
+    display: flex;
+}
+
+/* Regola d'oro per le immagini, con max-widht, le immagini restano nel loro contenitore */
+img{
+    max-width: 100%;
+}
+
+.image{
+    width: 30%;
+}
+
+
